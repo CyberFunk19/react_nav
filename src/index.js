@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route, Link } from'react-router-dom';
+import Lion from './Lion';
+import Elephant from './Elephant';
+import Bear from './Bear';
+import Kangaroo from './Kangaroo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App/>}>
+          <Route path="Lion" element={<Lion />} />
+          <Route path="Elephant" element={<Elephant />} />
+          <Route path="Bear" element={<Bear />} />
+          <Route path="Kangaroo" element={<Kangaroo />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
