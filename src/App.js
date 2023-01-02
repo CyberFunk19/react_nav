@@ -4,13 +4,11 @@ import { Link, Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <h1>My Animals: </h1>
+    <div style={{textAlign: "center", backgroundColor:"burlywood"}} >
+      <h1>My Zoo: </h1>
       <nav style={{borderBottom: "solid 1px", paddingBottom: "1rem" }}>
-        <Link to="/Lion">Lion</Link> | {" "}
-        <Link to="/Elephant">Elephant</Link> | {" "}
-        <Link to="/Bear">Bear</Link> | {" "}
-        <Link to="/Kangaroo">Kangaroo</Link>
+      <Link to="/Zoo">Zoo</Link> | {" "}
+        
       </nav>
       <Outlet />
     </div>
